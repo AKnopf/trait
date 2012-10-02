@@ -1,0 +1,6 @@
+= TODO
+* Remove unnecessary features with small, proper refactorings
+    * instance variables
+    * class_level_resolves and methods
+* Maybe use a builder pattern for creating incorporations?
+
