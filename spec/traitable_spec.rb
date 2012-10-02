@@ -51,8 +51,10 @@ module Traits
           end
         end
 
-        # Switch original class with fake class
+        # Silently switch original class with fake class
+        old_verbose, $VERBOSE = $VERBOSE, nil
         ORIGINAL_INCORPORATION, Incorporation = Incorporation, MockIncorporation
+        $VERBOSE = old_verbose
 
         module Hittable
           # logic for hitting an object
@@ -66,8 +68,10 @@ module Traits
 
         Incorporation.instance.incorporated.should be_true
 
-        # Switch back to original class
+        # Silently switch back to original class
+        old_verbose, $VERBOSE = $VERBOSE, nil
         Incorporation = ORIGINAL_INCORPORATION
+        $VERBOSE = old_verbose
       end
     end
   end

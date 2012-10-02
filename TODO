@@ -1,7 +1,9 @@
 = TODO
+* Make only lambda resolves possible (for now)
 * make basic functionality work! now.
 * incorporation options :only and :except
 * Maybe use a builder pattern for creating incorporations?
+* What about a method in a trait, that needs a block?
 
 
 = ideas

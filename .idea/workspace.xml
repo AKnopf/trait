@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5524f79-6b13-4831-a5a9-dd42c2827c6c" name="Default" comment="Removed attributes from traits">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="f5524f79-6b13-4831-a5a9-dd42c2827c6c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/incorporation.rb" afterPath="$PROJECT_DIR$/lib/incorporation.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/trait.rb" afterPath="$PROJECT_DIR$/lib/trait.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/traitable.rb" afterPath="$PROJECT_DIR$/lib/traitable.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/incorporation_spec.rb" afterPath="$PROJECT_DIR$/spec/incorporation_spec.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/traitable_spec.rb" afterPath="$PROJECT_DIR$/spec/traitable_spec.rb" />
     </list>
     <ignored path="trait.iws" />
@@ -30,24 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="traitable.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/traitable.rb">
+      <file leaf-file-name="incorporation_spec.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="10" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="236" column="6" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.8027842">
               <folding>
-                <element signature="e#350#433#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="incorporation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="76" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#2529#2909#0" expanded="false" />
-                <element signature="e#2915#2995#0" expanded="false" />
+                <element signature="e#411#488#0" expanded="true" />
+                <element signature="e#5837#5900#2" expanded="true" />
+                <element signature="e#6009#6066#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,7 +45,7 @@
       <file leaf-file-name="traitable_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="65" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
+            <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#1279#1345#0" expanded="true" />
                 <element signature="e#1357#1423#0" expanded="true" />
@@ -65,19 +54,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hash.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/core_extensions/hash.rb">
+      <file leaf-file-name="incorporation.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
+            <state line="121" column="38" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#2140#2882#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TODO" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TODO">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="53" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TODO">
+      <file leaf-file-name="trait_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="36" selection-start="43" selection-end="43" vertical-scroll-proportion="0.027642276">
+            <state line="8" column="4" selection-start="306" selection-end="417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,12 +106,12 @@
         <option value="$PROJECT_DIR$/spec/core_extensions/can_be_constant_spec.rb" />
         <option value="$PROJECT_DIR$/lib/core_extensions/module.rb" />
         <option value="$PROJECT_DIR$/lib/core_extensions/hash.rb" />
-        <option value="$PROJECT_DIR$/spec/incorporation_spec.rb" />
         <option value="$PROJECT_DIR$/lib/trait.rb" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/lib/traitable.rb" />
-        <option value="$PROJECT_DIR$/lib/incorporation.rb" />
         <option value="$PROJECT_DIR$/spec/traitable_spec.rb" />
+        <option value="$PROJECT_DIR$/TODO" />
+        <option value="$PROJECT_DIR$/lib/incorporation.rb" />
+        <option value="$PROJECT_DIR$/spec/incorporation_spec.rb" />
       </list>
     </option>
   </component>
@@ -182,6 +182,52 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core_extensions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,7 +544,11 @@
       <created>1349166921725</created>
       <updated>1349166921725</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added test for traitable">
+      <created>1349166975684</created>
+      <updated>1349166975684</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -534,10 +584,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4234375" sideWeight="0.22513089" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32984293" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.21884817" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.44397905" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.6701571" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.071204185" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.48376963" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.43769634" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.9287958" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="-1188" y="92" width="1096" height="840" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -583,7 +633,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added rubymine project files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added test for traitable" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -601,6 +651,7 @@
     <MESSAGE value="Removed attributes from traits" />
     <MESSAGE value="Removed class level methods and resolves" />
     <MESSAGE value="Added rubymine project files" />
+    <MESSAGE value="Added test for traitable" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -613,13 +664,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs19/object.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="661" column="6" selection-start="23323" selection-end="23323" vertical-scroll-proportion="0.44715446">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="36" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
@@ -669,53 +713,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="32" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="58" selection-start="2857" selection-end="2857" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/trait.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="19" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="76" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2529#2909#0" expanded="false" />
-            <element signature="e#2915#2995#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/traitable.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="10" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#350#433#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="65" selection-start="1699" selection-end="1699" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1279#1345#0" expanded="true" />
-            <element signature="e#1357#1423#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -726,10 +727,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/resolve.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="19" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/traitable.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="43" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="36" selection-start="43" selection-end="43" vertical-scroll-proportion="0.027642276">
+        <state line="5" column="53" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="306" selection-end="417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="38" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2140#2882#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1279#1345#0" expanded="true" />
+            <element signature="e#1357#1423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="236" column="6" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.8027842">
+          <folding>
+            <element signature="e#411#488#0" expanded="true" />
+            <element signature="e#5837#5900#2" expanded="true" />
+            <element signature="e#6009#6066#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -23,9 +23,9 @@ module Traits
 
     it 'should be constructable via a big hash' do
       create_via_big_hash = -> do
-        Incorporation[traits:               [:movable],
-                      resolves:             { [:draw, :update, :setup] => { } },
-                      incorporator:         generic_traitable_class
+        Incorporation[traits:       [:movable],
+                      resolves:     { [:draw, :update, :setup] => { } },
+                      incorporator: generic_traitable_class
         ]
 
         create_via_big_hash.should_not raise_error
@@ -34,8 +34,8 @@ module Traits
 
     it 'requires a mandatory incorporator' do
       create = -> do
-        Incorporation[traits:               :movable,
-                      resolves:             { }]
+        Incorporation[traits:   :movable,
+                      resolves: { }]
       end
       create.should raise_error
     end
@@ -51,9 +51,9 @@ module Traits
 
     it 'should accept a single trait as a plain symbol' do
       create = -> do
-        Incorporation[traits:               :movable,
-                      resolves:             { [:draw, :update, :setup] => { } },
-                      incorporator:         generic_traitable_class]
+        Incorporation[traits:       :movable,
+                      resolves:     { [:draw, :update, :setup] => { } },
+                      incorporator: generic_traitable_class]
 
       end
 
@@ -62,17 +62,17 @@ module Traits
 
     it 'should accept a single trait as a plain module' do
       create = -> do
-        Incorporation[traits:               Movable,
-                      resolves:             { [:draw, :update, :setup] => { } },
-                      incorporator:         generic_traitable_class]
+        Incorporation[traits:       Movable,
+                      resolves:     { [:draw, :update, :setup] => { } },
+                      incorporator: generic_traitable_class]
       end
       create.should_not raise_error
     end
 
     it 'should accept no resolves given' do
       create = -> do
-        Incorporation[traits:               Movable,
-                      incorporator:         generic_traitable_class]
+        Incorporation[traits:       Movable,
+                      incorporator: generic_traitable_class]
       end
       create.should_not raise_error
       #noinspection RubyArgCount
@@ -81,9 +81,9 @@ module Traits
 
     it 'should accept arrays as resolve matcher' do
       create = -> do
-        Incorporation[traits:               Movable,
-                      resolves:             { [:draw, :update, :setup] => { } },
-                      incorporator:         generic_traitable_class]
+        Incorporation[traits:       Movable,
+                      resolves:     { [:draw, :update, :setup] => { } },
+                      incorporator: generic_traitable_class]
       end
       create.should_not raise_error
       #noinspection RubyArgCount
@@ -114,38 +114,38 @@ module Traits
     end
 
     it 'should detect colliding method names' do
-      incorporation = Incorporation[traits:               [:movable, :emotion],
-                                    resolves:             { },
-                                    incorporator:         generic_traitable_class]
+      incorporation = Incorporation[traits:       [:movable, :emotion],
+                                    resolves:     { },
+                                    incorporator: generic_traitable_class]
       incorporation.colliding_methods.should have(1).entry
       incorporation.colliding_methods.should include(:moved?)
     end
 
     it 'should detect unresolved collisions' do
-      incorporation = Incorporation[traits:               [:movable, :emotion],
-                                    resolves:             { },
-                                    incorporator:         generic_traitable_class]
+      incorporation = Incorporation[traits:       [:movable, :emotion],
+                                    resolves:     { },
+                                    incorporator: generic_traitable_class]
       incorporation.unresolved_colliding_methods.should have(1).entry
       incorporation.unresolved_colliding_methods.should include(:moved?)
 
-      incorporation = Incorporation[traits:               [:movable, :emotion],
-                                    resolves:             { moved?: { } },
-                                    incorporator:         generic_traitable_class]
+      incorporation = Incorporation[traits:       [:movable, :emotion],
+                                    resolves:     { moved?: { } },
+                                    incorporator: generic_traitable_class]
       incorporation.unresolved_colliding_methods.should have(0).entries
 
     end
 
     it 'should raise error when incorporated with unresolved conflicts' do
-      wrong_incorporation = -> { Incorporation[traits:               [:movable, :emotion],
-                                               resolves:             { },
-                                               incorporator:         generic_traitable_class].incorporate }
+      wrong_incorporation = -> { Incorporation[traits:       [:movable, :emotion],
+                                               resolves:     { },
+                                               incorporator: generic_traitable_class].incorporate }
       wrong_incorporation.should raise_error
     end
 
     it 'should alias conflicted methods in traits upon incorporation' do
-      Incorporation[traits:               [:movable, :emotion],
-                    resolves:             { moved?: { } },
-                    incorporator:         generic_traitable_class].incorporate
+      Incorporation[traits:       [:movable, :emotion],
+                    resolves:     { moved?: { } },
+                    incorporator: generic_traitable_class].incorporate
       #raise Trait[:movable].instance_methods.inspect
       Trait[:movable].instance_methods.should include(:moved?, :direction, :moved_in_movable?)
       Trait[:movable].instance_methods.should have(3).entries
@@ -162,9 +162,9 @@ module Traits
         end
       end
 
-      incorporation = Incorporation[traits:               :movable,
-                                    resolves:             { },
-                                    incorporator:         Bullet]
+      incorporation = Incorporation[traits:       :movable,
+                                    resolves:     { },
+                                    incorporator: Bullet]
 
       #raise incorporation.colliding_methods.inspect
       #raise Bullet.instance_methods(false).inspect
@@ -174,6 +174,69 @@ module Traits
 
     end
 
+
+    describe 'actual incorporation' do
+
+      it 'enables instance methods when there are no collisions' do
+        module Hittable
+          def hit(damage)
+            self.health -= damage
+          end
+        end
+
+
+        class Monster
+          include Traitable
+
+          attr_accessor :health
+
+          def initialize
+            self.health = 10
+          end
+
+          trait(traits:       [:hittable, :movable],
+                incorporator: self,
+                resolves:     { })
+        end
+
+        monster = Monster.new
+        monster.should respond_to(:hit, :moved?, :direction)
+
+        monster.hit(4)
+        monster.health.should == 6
+      end
+
+      it 'requires conflicted methods to be resolved' do
+        class Fish
+          include Traitable
+        end
+
+        no_resolves = -> do
+          class Fish
+            trait(traits:       [:movable, :emotion],
+                  incorporator: self,
+                  resolves:     { })
+          end
+        end
+
+        no_resolves.should raise_error
+
+      end
+
+      it 'resolves methods with a simple lambda' do
+        class Fish
+          trait(traits:       [:movable, :emotion],
+                incorporator: self,
+                resolves:     { moved?: { lambda: -> { "resolved without use of original implementations" } } }
+          )
+        end
+
+        Fish.new.moved?.should == "resolved without use of original implementations"
+      end
+
+
+
+    end
 
   end
 

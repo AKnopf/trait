@@ -17,8 +17,8 @@ module Traits
     # @return [Hash<Trait, Hash>] traits that are incorporated from the incorporator and their respective options
     attr_reader :traits
 
-    # @return [Hash<Symbol, Resolve>] resolves names of possibly conflicting methods and their respective resolve
-    #   patterns
+    # @return [Hash<Symbol, Resolve>] resolves names of possibly conflicting methods and their respective
+    #   resolve patterns
     attr_reader :resolves
 
     # @return [Traitable] The class or trait module that uses this incorporation of traits
@@ -53,11 +53,19 @@ module Traits
 
     # Executes the Incorporation of traits into a trait or class.
     def incorporate
-      if colliding_methods.empty? #trivial case
+      if colliding_methods.empty? #trivial case: no conflicts
         traits.keys.each { |trait| incorporator.send(:include,trait.module)}
-      elsif unresolved_colliding_methods.empty?
+      elsif unresolved_colliding_methods.empty? # all conflicts are resolved
         traits.keys.each { |trait| trait.alias_methods(*colliding_methods) }
-      else
+        incorporation_resolves = self.resolves
+        colliding_methods.each do |method|
+          incorporator.module_eval do
+            define_method method do |*args, &block|
+              incorporation_resolves[method].lambda.call(*args, &block)
+            end
+          end
+        end
+      else # unresolved conflicts
         raise "there are unresolved colliding methods: #{unresolved_colliding_methods}"
       end
     end
