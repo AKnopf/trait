@@ -42,9 +42,9 @@ module Traits
         resolves,
         incorporator)
 
-      @traits               = initialize_traits normalize_traits traits
-      @resolves             = initialize_resolves normalize_resolves resolves
-      @incorporator         = incorporator
+      @traits       = initialize_traits normalize_traits traits
+      @resolves     = initialize_resolves normalize_resolves resolves
+      @incorporator = incorporator
 
       validate
 
@@ -54,16 +54,13 @@ module Traits
     # Executes the Incorporation of traits into a trait or class.
     def incorporate
       if colliding_methods.empty? #trivial case: no conflicts
-        traits.keys.each { |trait| incorporator.send(:include,trait.module)}
+        traits.keys.each { |trait| incorporator.send(:include, trait.module) }
       elsif unresolved_colliding_methods.empty? # all conflicts are resolved
         traits.keys.each { |trait| trait.alias_methods(*colliding_methods) }
+        traits.keys.each { |trait| incorporator.send(:include, trait.module) }
         incorporation_resolves = self.resolves
         colliding_methods.each do |method|
-          incorporator.module_eval do
-            define_method method do |*args, &block|
-              incorporation_resolves[method].lambda.call(*args, &block)
-            end
-          end
+          incorporator.send(:define_method, method, incorporation_resolves[method].lambda)
         end
       else # unresolved conflicts
         raise "there are unresolved colliding methods: #{unresolved_colliding_methods}"

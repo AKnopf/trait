@@ -234,6 +234,31 @@ module Traits
         Fish.new.moved?.should == "resolved without use of original implementations"
       end
 
+      it 'evals resolve lambdas in instance context' do
+        class Programmer
+          include Traitable
+
+          attr_accessor :chips_eaten, :size_of_bag_of_chips
+
+
+          def initialize chips_eaten, size_of_bag_of_chips
+            self.chips_eaten = chips_eaten
+            self.size_of_bag_of_chips = size_of_bag_of_chips
+          end
+
+          trait(traits:       [:movable, :emotion],
+                incorporator: self,
+                resolves:     { moved?: { lambda: -> { chips_eaten >= size_of_bag_of_chips } } }
+          )
+        end
+
+        hungry_programmer = Programmer.new(0,40)
+        satisfied_programmer = Programmer.new(42,40)
+
+        hungry_programmer.should_not be_moved
+        satisfied_programmer.should be_moved
+
+      end
 
 
     end

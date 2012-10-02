@@ -2,11 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5524f79-6b13-4831-a5a9-dd42c2827c6c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/checksums" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/object_types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/objects/root.dat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/proxy_types" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Array.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/CanBeConstant.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Hash.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Module.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/String.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Symbol.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Incorporation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Resolve.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Trait.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Traitable.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Traitable/ClassMethods.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/_index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/class_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/full_list.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/file.README.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/file_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/frames.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/app.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/full_list.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/method_list.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/top-level-namespace.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.yardopts" afterPath="$PROJECT_DIR$/.yardopts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/incorporation.rb" afterPath="$PROJECT_DIR$/lib/incorporation.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/incorporation_spec.rb" afterPath="$PROJECT_DIR$/spec/incorporation_spec.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/traitable_spec.rb" afterPath="$PROJECT_DIR$/spec/traitable_spec.rb" />
     </list>
     <ignored path="trait.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,14 +59,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="incorporation_spec.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="incorporation_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="236" column="6" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.8027842">
+            <state line="258" column="35" selection-start="7875" selection-end="7875" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#411#488#0" expanded="true" />
-                <element signature="e#5837#5900#2" expanded="true" />
-                <element signature="e#6009#6066#0" expanded="true" />
+                <element signature="e#7313#7479#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,10 +74,7 @@
         <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1279#1345#0" expanded="true" />
-                <element signature="e#1357#1423#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -57,18 +82,18 @@
       <file leaf-file-name="incorporation.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="38" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0">
+            <state line="62" column="52" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#2140#2882#0" expanded="true" />
+                <element signature="e#4216#4699#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TODO" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="53" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
+            <state line="2" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.039443154">
               <folding />
             </state>
           </provider>
@@ -77,7 +102,7 @@
       <file leaf-file-name="trait_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="4" selection-start="306" selection-end="417" vertical-scroll-proportion="0.0">
+            <state line="10" column="26" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -109,9 +134,9 @@
         <option value="$PROJECT_DIR$/lib/trait.rb" />
         <option value="$PROJECT_DIR$/lib/traitable.rb" />
         <option value="$PROJECT_DIR$/spec/traitable_spec.rb" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/lib/incorporation.rb" />
         <option value="$PROJECT_DIR$/spec/incorporation_spec.rb" />
+        <option value="$PROJECT_DIR$/TODO" />
       </list>
     </option>
   </component>
@@ -238,11 +263,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editing.templates" />
+    <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -250,37 +275,7 @@
       <recent name="C:\Users\Marvin\RubymineProjects\trait\lib\core_extensions" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.All specs in: spec">
-    <configuration default="false" name="Incorporation should be constructable via separate arguments" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="trait" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation should be constructable via separate arguments" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyDebugRunner" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context">
     <configuration default="false" name="incorporation_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="trait" />
@@ -393,6 +388,34 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
+    <configuration default="false" name="Incorporation actual incorporation evals resolve lambdas in instance context" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="trait" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation actual incorporation evals resolve lambdas in instance context" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="" />
@@ -483,19 +506,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.Incorporation should be constructable via separate arguments" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.Incorporation should be constructable via separate arguments" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
       </list>
     </recent_temporary>
   </component>
@@ -548,10 +571,18 @@
       <created>1349166975684</created>
       <updated>1349166975684</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Resolving name conflicts with a simple lambda works">
+      <created>1349169407849</created>
+      <updated>1349169407849</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added custom yard tags">
+      <created>1349170204493</created>
+      <updated>1349170204493</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
-  <component name="TodoView" selected-index="3">
+  <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
       <are-packages-shown value="false" />
       <are-modules-shown value="false" />
@@ -576,23 +607,23 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.071204185" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.5183246" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.40314135" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28020832" sideWeight="0.7204189" order="7" side_tool="true" content_ui="tabs" x="0" y="235" width="1920" height="280" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28020832" sideWeight="0.7204189" order="7" side_tool="true" content_ui="tabs" x="0" y="235" width="1920" height="280" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.9287958" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="-1188" y="92" width="1096" height="840" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4234375" sideWeight="0.22513089" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.071204185" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.48376963" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.43769634" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.9287958" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="-1188" y="92" width="1096" height="840" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -633,7 +664,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test for traitable" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added custom yard tags" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -652,6 +683,8 @@
     <MESSAGE value="Removed class level methods and resolves" />
     <MESSAGE value="Added rubymine project files" />
     <MESSAGE value="Added test for traitable" />
+    <MESSAGE value="Resolving name conflicts with a simple lambda works" />
+    <MESSAGE value="Added custom yard tags" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,122 +699,95 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="36" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3" column="36" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/resolve_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/core_extensions/module_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="28" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/core_extensions/can_be_constant_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="3" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/core_extensions/array.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="15" column="3" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/core_extensions/can_be_constant.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/core_extensions/module.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="9" column="19" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/trait.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="19" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="55" column="19" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/core_extensions/hash.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/resolve.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="19" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="59" column="19" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/traitable.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="43" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="53" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="13" column="43" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="4" selection-start="306" selection-end="417" vertical-scroll-proportion="0.0">
+        <state line="10" column="26" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="38" selection-start="4659" selection-end="4659" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2140#2882#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="52" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1279#1345#0" expanded="true" />
-            <element signature="e#1357#1423#0" expanded="true" />
+            <element signature="e#4216#4699#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="6" selection-start="7131" selection-end="7131" vertical-scroll-proportion="0.8027842">
+        <state line="258" column="35" selection-start="7875" selection-end="7875" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#411#488#0" expanded="true" />
-            <element signature="e#5837#5900#2" expanded="true" />
-            <element signature="e#6009#6066#0" expanded="true" />
+            <element signature="e#7313#7479#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TODO">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.039443154">
+          <folding />
         </state>
       </provider>
     </entry>

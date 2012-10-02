@@ -1,5 +1,6 @@
 = TODO
-* Make only lambda resolves possible (for now)
+* Make only lambda resolves possible
+    * with reference to original versions
 * make basic functionality work! now.
 * incorporation options :only and :except
 * Maybe use a builder pattern for creating incorporations?
