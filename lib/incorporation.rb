@@ -53,7 +53,9 @@ module Traits
 
     # Executes the Incorporation of traits into a trait or class.
     def incorporate
-      if unresolved_colliding_methods.empty?
+      if colliding_methods.empty? #trivial case
+        traits.keys.each { |trait| incorporator.send(:include,trait.module)}
+      elsif unresolved_colliding_methods.empty?
         traits.keys.each { |trait| trait.alias_methods(*colliding_methods) }
       else
         raise "there are unresolved colliding methods: #{unresolved_colliding_methods}"

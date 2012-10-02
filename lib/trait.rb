@@ -49,6 +49,9 @@
         self.module.instance_methods false
       end
 
+      # Returns the name of the module without its nesting
+      # @example
+      #   Trait[MyApp::MyTraits::MyAwesomeTrait].simple_name #=> "MyAwesomeTrait"
       def simple_name
         self.module.to_s[/\w+\z/]
       end

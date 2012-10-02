@@ -1,5 +1,10 @@
 = TODO
-* Remove unnecessary features with small, proper refactorings
-    * incorporation options
+* make basic functionality work! now.
+* incorporation options :only and :except
 * Maybe use a builder pattern for creating incorporations?
+
+
+= ideas
+* Define "part state"  - a trait that handles instance variables.
+  So the class does not need to implement all the getters and setters manually
 
