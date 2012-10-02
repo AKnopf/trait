@@ -45,10 +45,6 @@
 
       include Comparable
 
-      def class_methods
-        self.module.const_fetch(:ClassMethods).instance_methods false
-      end
-
       def instance_methods
         self.module.instance_methods false
       end

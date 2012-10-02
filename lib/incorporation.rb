@@ -1,6 +1,6 @@
 module Traits
-# An Incorporation is the process of incorporating traits into a class or a another trait. Four things must be
-# specified to incorporate traits:
+# An Incorporation is the process of incorporating traits into a class or a another trait.
+# The following things must be specified to incorporate traits:
 # * [The traits themselves]
 #   This can be done in the form of an array of symbols (the name of the trait) or an array of modules (the
 #   actual trait). A single trait with default options can be specified as a plain Symbol or Module
@@ -12,8 +12,6 @@ module Traits
 #   Traits not only add attributes to the class, but also methods. When multiple traits are incorporated, there
 #   can occur name conflicts. These must be manually resolved. As there are common patterns to resolve these
 #   conflict, this can be done compactly during the incorporation by defining these patterns.
-# * [Class level resolves]
-#   This is the same as resolves but for class level methods.
   class Incorporation
 
     # @return [Hash<Trait, Hash>] traits that are incorporated from the incorporator and their respective options
@@ -22,9 +20,6 @@ module Traits
     # @return [Hash<Symbol, Resolve>] resolves names of possibly conflicting methods and their respective resolve
     #   patterns
     attr_reader :resolves
-
-    # @return [Hash<Symbol, Resolve>] class_level_resolves like {#resolves} but for class level methods
-    attr_reader :class_level_resolves
 
     # @return [Traitable] The class or trait module that uses this incorporation of traits
     attr_reader :incorporator
@@ -45,12 +40,10 @@ module Traits
 
     def initialize(traits,
         resolves,
-        class_level_resolves,
         incorporator)
 
       @traits               = initialize_traits normalize_traits traits
       @resolves             = initialize_resolves normalize_resolves resolves
-      @class_level_resolves = initialize_resolves normalize_resolves class_level_resolves
       @incorporator         = incorporator
 
       validate
@@ -89,7 +82,6 @@ module Traits
     def validate
       validate_traits
       validate_resolves resolves
-      validate_resolves class_level_resolves
       validate_incorporator
     end
 

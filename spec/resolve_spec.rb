@@ -5,6 +5,7 @@ require_relative '../lib/core_extensions/module'
 require_relative '../lib/resolve'
 
 
+#noinspection ALL
 module Traits
 
   module Movable
