@@ -1,4 +1,4 @@
 trait
 =====
 
-Implementation of traits for ruby
+Implementation of traits for ruby.
