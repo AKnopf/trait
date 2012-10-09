@@ -1,41 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_TEST_SOURCES" value="false" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f5524f79-6b13-4831-a5a9-dd42c2827c6c" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/checksums" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/object_types" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/objects/root.dat" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.yardoc/proxy_types" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Array.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/CanBeConstant.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Hash.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Module.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/String.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Symbol.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Incorporation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Resolve.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Trait.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Traitable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/Traits/Traitable/ClassMethods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/_index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/class_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/full_list.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/file.README.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/file_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/frames.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/full_list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/method_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/top-level-namespace.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/trait.iml" afterPath="$PROJECT_DIR$/.idea/trait.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.yardopts" afterPath="$PROJECT_DIR$/.yardopts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/core_extensions/array.rb" afterPath="$PROJECT_DIR$/lib/core_extensions/array.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/incorporation.rb" afterPath="$PROJECT_DIR$/lib/incorporation.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/resolve.rb" afterPath="$PROJECT_DIR$/lib/resolve.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/incorporation_spec.rb" afterPath="$PROJECT_DIR$/spec/incorporation_spec.rb" />
     </list>
     <ignored path="trait.iws" />
@@ -59,32 +38,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="incorporation_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
+      <file leaf-file-name="incorporation.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="258" column="35" selection-start="7875" selection-end="7875" vertical-scroll-proportion="0.0">
+            <state line="79" column="0" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#7313#7479#0" expanded="true" />
+                <element signature="e#2116#2876#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="traitable_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
+      <file leaf-file-name="array.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/core_extensions/array.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="4" column="55" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#137#227#0" expanded="true" />
+                <element signature="e#285#327#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="incorporation.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
+      <file leaf-file-name="incorporation_spec.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="52" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.0">
+            <state line="320" column="40" selection-start="9526" selection-end="9526" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#4216#4699#0" expanded="true" />
+                <element signature="e#8013#8082#2" expanded="true" />
+                <element signature="e#8128#8185#2" expanded="true" />
+                <element signature="e#8734#8912#2" expanded="true" />
+                <element signature="e#8957#9057#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,16 +78,7 @@
       <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.039443154">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="trait_spec.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="26" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
+            <state line="13" column="69" selection-start="598" selection-end="598" vertical-scroll-proportion="0.40550458">
               <folding />
             </state>
           </provider>
@@ -121,12 +97,10 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/resolve.rb" />
         <option value="$PROJECT_DIR$/spec/core_extensions/hash.rb" />
         <option value="$APPLICATION_HOME_DIR$/rubystubs19/object.rb" />
         <option value="$PROJECT_DIR$/spec/core_extensions/module_spec.rb" />
         <option value="$PROJECT_DIR$/spec/trait_spec.rb" />
-        <option value="$PROJECT_DIR$/lib/core_extensions/array.rb" />
         <option value="$PROJECT_DIR$/spec/resolve_spec.rb" />
         <option value="$PROJECT_DIR$/spec/core_extensions/can_be_constant_spec.rb" />
         <option value="$PROJECT_DIR$/lib/core_extensions/module.rb" />
@@ -135,6 +109,8 @@
         <option value="$PROJECT_DIR$/lib/traitable.rb" />
         <option value="$PROJECT_DIR$/spec/traitable_spec.rb" />
         <option value="$PROJECT_DIR$/lib/incorporation.rb" />
+        <option value="$PROJECT_DIR$/lib/resolve.rb" />
+        <option value="$PROJECT_DIR$/lib/core_extensions/array.rb" />
         <option value="$PROJECT_DIR$/spec/incorporation_spec.rb" />
         <option value="$PROJECT_DIR$/TODO" />
       </list>
@@ -234,6 +210,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core_extensions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trait" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -263,11 +257,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="editing.templates" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.General" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -275,63 +269,7 @@
       <recent name="C:\Users\Marvin\RubymineProjects\trait\lib\core_extensions" />
     </key>
   </component>
-  <component name="RunManager" selected="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context">
-    <configuration default="false" name="incorporation_spec" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="trait" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Incorporation should accept a single trait as a plain module" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
-      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
-      <module name="trait" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation should accept a single trait as a plain module" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="RSpec.Incorporation actual incorporation can resolve methods that use blocks">
     <configuration default="false" name="Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
       <predefined_log_file id="RUBY_RSPEC" enabled="true" />
       <module name="trait" />
@@ -406,6 +344,64 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation actual incorporation evals resolve lambdas in instance context" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Incorporation actual incorporation can access original versions of the conflicted method" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="trait" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation actual incorporation can access original versions of the conflicted method" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Incorporation actual incorporation can resolve methods that use blocks" type="RSpecRunConfigurationType" factoryName="RSpec" temporary="true">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="trait" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$/spec" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs>
+        <env name="JRUBY_OPTS" value="-X+O" />
+      </envs>
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="$PROJECT_DIR$/spec/incorporation_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="Incorporation actual incorporation can resolve methods that use blocks" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
@@ -499,26 +495,28 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <RunnerSettings RunnerId="RubyCover" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyCover" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="RSpec.All specs in: spec" />
-      <item index="1" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
-      <item index="2" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
-      <item index="3" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
-      <item index="4" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
-      <item index="5" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
+      <item index="1" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
+      <item index="2" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
+      <item index="3" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
+      <item index="4" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation can access original versions of the conflicted method" />
+      <item index="5" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation can resolve methods that use blocks" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
-        <item index="1" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
-        <item index="2" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
-        <item index="3" class="java.lang.String" itemvalue="RSpec.incorporation_spec" />
-        <item index="4" class="java.lang.String" itemvalue="RSpec.Incorporation should accept a single trait as a plain module" />
+        <item index="0" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation can resolve methods that use blocks" />
+        <item index="1" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation can access original versions of the conflicted method" />
+        <item index="2" class="java.lang.String" itemvalue="RSpec.Incorporation actual incorporation evals resolve lambdas in instance context" />
+        <item index="3" class="java.lang.String" itemvalue="RSpec.traitable_spec" />
+        <item index="4" class="java.lang.String" itemvalue="RSpec.Traitable basic behavior class macros should have method &quot;trait&quot; and &quot;traits&quot;" />
       </list>
     </recent_temporary>
   </component>
@@ -579,7 +577,11 @@
       <created>1349170204493</created>
       <updated>1349170204493</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Resolve lambdas are called properly in instance context">
+      <created>1349178979381</created>
+      <updated>1349178979381</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -607,18 +609,18 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32984293" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.071204185" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.071204185" sideWeight="0.49791667" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.5183246" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20520833" sideWeight="0.40314135" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.190625" sideWeight="0.16335079" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.190625" sideWeight="0.426178" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40314135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28020832" sideWeight="0.7204189" order="7" side_tool="true" content_ui="tabs" x="0" y="235" width="1920" height="280" />
-      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.9287958" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35260418" sideWeight="0.5968586" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" x="-1188" y="92" width="1096" height="840" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879582" sideWeight="0.49791667" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -626,7 +628,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4234375" sideWeight="0.22513089" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -664,7 +666,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added custom yard tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve lambdas are called properly in instance context" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -685,46 +687,22 @@
     <MESSAGE value="Added test for traitable" />
     <MESSAGE value="Resolving name conflicts with a simple lambda works" />
     <MESSAGE value="Added custom yard tags" />
+    <MESSAGE value="Resolve lambdas are called properly in instance context" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/lib/incorporation.rb</url>
-          <line>28</line>
+          <line>73</line>
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/lib/core_extensions/hash.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="36" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/resolve_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/core_extensions/module_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spec/core_extensions/can_be_constant_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="3" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/core_extensions/array.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="3" selection-start="328" selection-end="328" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/core_extensions/can_be_constant.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="7" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/core_extensions/module.rb">
@@ -737,56 +715,101 @@
         <state line="55" column="19" selection-start="1201" selection-end="1201" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/core_extensions/hash.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="39" selection-start="315" selection-end="315" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/resolve.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="19" selection-start="2428" selection-end="2428" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/traitable.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="43" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
+    <entry file="file://$PROJECT_DIR$/spec/core_extensions/can_be_constant_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="29" column="3" selection-start="1065" selection-end="1065" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/core_extensions/module_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="7" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/resolve_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="17" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/traitable_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.0">
+        <state line="69" column="23" selection-start="1924" selection-end="1924" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/resolve.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="23" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#1943#2234#0" expanded="true" />
+            <element signature="e#2718#2803#0" expanded="true" />
+            <element signature="e#2809#3436#0" expanded="true" />
+            <element signature="e#3442#3549#0" expanded="true" />
+            <element signature="e#3556#3635#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/trait_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Ruby193/lib/ruby/gems/1.9.1/gems/rspec-core-2.11.1/lib/rspec/core/example.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="0" selection-start="4104" selection-end="4104" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/incorporation.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="52" selection-start="2648" selection-end="2648" vertical-scroll-proportion="0.0">
+        <state line="79" column="0" selection-start="3230" selection-end="3230" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#4216#4699#0" expanded="true" />
+            <element signature="e#2116#2876#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/core_extensions/array.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="55" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#137#227#0" expanded="true" />
+            <element signature="e#285#327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Ruby193/lib/ruby/gems/1.9.1/gems/rspec-core-2.11.1/lib/rspec/core/configuration.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="779" column="0" selection-start="26711" selection-end="26711" vertical-scroll-proportion="0.33211008">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/incorporation_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="258" column="35" selection-start="7875" selection-end="7875" vertical-scroll-proportion="0.0">
+        <state line="320" column="40" selection-start="9526" selection-end="9526" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#7313#7479#0" expanded="true" />
+            <element signature="e#8013#8082#2" expanded="true" />
+            <element signature="e#8128#8185#2" expanded="true" />
+            <element signature="e#8734#8912#2" expanded="true" />
+            <element signature="e#8957#9057#2" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="20" selection-start="64" selection-end="64" vertical-scroll-proportion="0.039443154">
+        <state line="13" column="69" selection-start="598" selection-end="598" vertical-scroll-proportion="0.40550458">
           <folding />
         </state>
       </provider>

@@ -242,7 +242,7 @@ module Traits
 
 
           def initialize chips_eaten, size_of_bag_of_chips
-            self.chips_eaten = chips_eaten
+            self.chips_eaten          = chips_eaten
             self.size_of_bag_of_chips = size_of_bag_of_chips
           end
 
@@ -252,12 +252,82 @@ module Traits
           )
         end
 
-        hungry_programmer = Programmer.new(0,40)
-        satisfied_programmer = Programmer.new(42,40)
+        hungry_programmer    = Programmer.new(0, 40)
+        satisfied_programmer = Programmer.new(42, 40)
 
         hungry_programmer.should_not be_moved
         satisfied_programmer.should be_moved
 
+      end
+
+
+      it 'can access original versions of the conflicted method' do
+        module Dessert
+          def ingredients
+            [:sugar, :milk, :chocolate]
+          end
+        end
+
+        module Entree
+          def ingredients
+            [:wine, :pasta]
+          end
+        end
+
+
+        class Meal
+          include Traitable
+
+          trait(traits:       [:dessert, :entree],
+                incorporator: self,
+                resolves:     { ingredients: { lambda: -> { ingredients_in_dessert + ingredients_in_entree } } }
+          )
+        end
+
+        meal = Meal.new
+        meal.ingredients.should have(5).ingredients
+        meal.ingredients.should include(:wine, :pasta, :sugar, :milk, :chocolate)
+      end
+
+      it 'can resolve methods that use blocks' do
+        module UsefulEnumerable
+          def each_second(&block)
+            second = false
+            each do |elem|
+              block.call elem if second
+              second = !second
+            end
+          end
+        end
+
+        module Timer
+          def each_second(&block)
+            # some timer things...
+            block.call self
+          end
+        end
+
+        class UsefulArray < Array
+          include Traitable
+
+          trait(traits:       [:useful_enumerable, :timer],
+                incorporator: self,
+                resolves:     { each_second: { lambda:
+                                                   lambda { |&block| each_second_in_useful_enumerable(&block) } } }
+          )
+
+          #def resolved_each_second(&block)
+          #  each_second_in_useful_enumerable(&block)
+          #end
+        end
+
+        array = UsefulArray.new
+        array << :a << :b << :c
+        selection = []
+        array.each_second do |elem|
+          selection << elem
+        end
+        selection.should have(1).entries
       end
 
 

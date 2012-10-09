@@ -60,6 +60,7 @@ module Traits
         traits.keys.each { |trait| incorporator.send(:include, trait.module) }
         incorporation_resolves = self.resolves
         colliding_methods.each do |method|
+          #raise incorporator.inspect
           incorporator.send(:define_method, method, incorporation_resolves[method].lambda)
         end
       else # unresolved conflicts

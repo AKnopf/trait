@@ -4,7 +4,8 @@ class Array
   # @example
   #   [1,1,2,3,3,4,5,5,5,6].duplicates! # => [1,3,5]
   def duplicates!
-    select! { |element| self.count(element) > 1 }.uniq!
+    select! { |element| self.count(element) > 1 }
+    uniq!
     self
   end
 
