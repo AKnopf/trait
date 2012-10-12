@@ -1,7 +1,8 @@
 require_relative '../lib/traitable'
 require_relative '../lib/trait'
 require_relative '../lib/core_extensions/module'
-require_relative '../lib/core_extensions/can_be_constant'
+require_relative '../lib/core_extensions/string_and_symbol'
+require_relative '../lib/traits_home'
 
 describe ::Traits::Trait do
   before :each do
@@ -12,7 +13,7 @@ describe ::Traits::Trait do
   end
 
   it 'should be constructable with trait look up' do
-    trait = ::Traits::Trait.new(:TestTrait)
+    trait = ::Traits::Trait[:TestTrait]
     trait.module.should be_instance_of(Module)
 
   end
@@ -33,7 +34,7 @@ describe ::Traits::Trait do
       end
     end
 
-    trait = ::Traits::Trait.new(:TestTrait)
+    trait = ::Traits::Trait[:TestTrait]
     trait.instance_methods.should have(2).entries
     trait.instance_methods.should include(:a_trait_method, :another_trait_method)
 
@@ -55,7 +56,7 @@ describe ::Traits::Trait do
       end
     end
 
-    trait = ::Traits::Trait.new(:TestTrait)
+    trait = ::Traits::Trait[:TestTrait]
     trait.alias_methods(:a_trait_method, :this_method_does_not_exist)
     trait.instance_methods.should have(3).entries
     trait.instance_methods.should include(:a_trait_method, :another_trait_method, :a_trait_method_in_test_trait)

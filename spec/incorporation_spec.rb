@@ -1,11 +1,11 @@
 require_relative '../lib/incorporation'
 require_relative '../lib/trait'
 require_relative '../lib/traitable'
-require_relative '../lib/resolve'
-require_relative '../lib/core_extensions/can_be_constant'
 require_relative '../lib/core_extensions/module'
 require_relative '../lib/core_extensions/array'
 require_relative '../lib/core_extensions/hash'
+require_relative '../lib/traits_home'
+require_relative '../lib/core_extensions/string_and_symbol'
 
 #noinspection ALL
 module Traits
@@ -144,7 +144,7 @@ module Traits
 
     it 'should alias conflicted methods in traits upon incorporation' do
       Incorporation[traits:       [:movable, :emotion],
-                    resolves:     { moved?: { } },
+                    resolves:     { moved?: ->{ raise :moved } },
                     incorporator: generic_traitable_class].incorporate
       #raise Trait[:movable].instance_methods.inspect
       Trait[:movable].instance_methods.should include(:moved?, :direction, :moved_in_movable?)
@@ -227,7 +227,7 @@ module Traits
         class Fish
           trait(traits:       [:movable, :emotion],
                 incorporator: self,
-                resolves:     { moved?: { lambda: -> { "resolved without use of original implementations" } } }
+                resolves:     { moved?:-> { "resolved without use of original implementations"} }
           )
         end
 
@@ -248,7 +248,7 @@ module Traits
 
           trait(traits:       [:movable, :emotion],
                 incorporator: self,
-                resolves:     { moved?: { lambda: -> { chips_eaten >= size_of_bag_of_chips } } }
+                resolves:     { moved?: -> { chips_eaten >= size_of_bag_of_chips } }
           )
         end
 
@@ -280,7 +280,7 @@ module Traits
 
           trait(traits:       [:dessert, :entree],
                 incorporator: self,
-                resolves:     { ingredients: { lambda: -> { ingredients_in_dessert + ingredients_in_entree } } }
+                resolves:     { ingredients: -> { ingredients_in_dessert + ingredients_in_entree } }
           )
         end
 
@@ -312,13 +312,9 @@ module Traits
 
           trait(traits:       [:useful_enumerable, :timer],
                 incorporator: self,
-                resolves:     { each_second: { lambda:
-                                                   lambda { |&block| each_second_in_useful_enumerable(&block) } } }
+                resolves:     { each_second: lambda { |&block| each_second_in_useful_enumerable(&block) } }
           )
 
-          #def resolved_each_second(&block)
-          #  each_second_in_useful_enumerable(&block)
-          #end
         end
 
         array = UsefulArray.new

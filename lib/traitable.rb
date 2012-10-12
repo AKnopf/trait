@@ -1,5 +1,4 @@
 module Traits
-  HOME ||= [Traits]
   module Traitable
     def self.included(base)
       # Makes the methods within ClassMethods class methods
@@ -16,7 +15,14 @@ module Traits
       alias :traits :trait
       alias :has_traits :trait
       alias :incorporates :trait
-      alias :incorporates_traits :trait
+
+
+      # Incorporates traits with the builder syntax
+      # @see Traits::Builder
+      def incorporate
+        Builder.new(self)
+      end
+      alias :incorporates :incorporate
     end
 
   end

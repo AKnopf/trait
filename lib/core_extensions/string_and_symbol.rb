@@ -1,3 +1,15 @@
+module CanBeTrait
+  def to_trait
+    constant = to_constant
+    ::Traits::HOME.each do |home|
+      if home.const_defined? constant
+        return Traits::Trait[home.const_get constant]
+      end
+    end
+    raise "trait '#{name}' was resolved to '#{constant}' but was not found."
+  end
+end
+
 module CanBeConstant
 
   # :movable_object | :movableObject | "movable object" | :movableObject => :MovableObject
@@ -38,10 +50,11 @@ end
 
 
 class String
+  include CanBeTrait
   include CanBeConstant
 end
 
-
 class Symbol
+  include CanBeTrait
   include CanBeConstant
 end

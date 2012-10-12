@@ -16,4 +16,8 @@ class Module
     end
   end
 
+  def to_trait
+    Traits::Trait.new(self)
+  end
+
 end

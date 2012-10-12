@@ -1,12 +1,11 @@
 require_relative '../lib/core_extensions/array'
-require_relative '../lib/core_extensions/can_be_constant'
 require_relative '../lib/core_extensions/hash'
 require_relative '../lib/core_extensions/module'
 
 require_relative '../lib/incorporation'
-require_relative '../lib/resolve'
 require_relative '../lib/trait'
 require_relative '../lib/traitable'
+require_relative '../lib/builder'
 
 require 'singleton'
 
@@ -26,8 +25,21 @@ module Traits
         BasicBehavior::GameObject.should respond_to(:trait,
                                                     :traits,
                                                     :has_traits,
-                                                    :incorporates,
-                                                    :incorporates_traits)
+                                                    :incorporates)
+      end
+
+      it 'should respond to method "incorporate" and its aliases' do
+        BasicBehavior::GameObject.should respond_to(:incorporate,
+                                                    :incorporates)
+      end
+
+      it 'should create a Builder when calling "incorporate"' do
+        builder = nil
+        BasicBehavior::GameObject.class_eval do
+          builder = self.incorporate
+        end
+        builder.should be_instance_of(Builder)
+        builder.send(:incorporator).should == BasicBehavior::GameObject
       end
 
 
@@ -52,9 +64,9 @@ module Traits
         end
 
         # Silently switch original class with fake class
-        old_verbose, $VERBOSE = $VERBOSE, nil
+        old_verbose, $VERBOSE                 = $VERBOSE, nil
         ORIGINAL_INCORPORATION, Incorporation = Incorporation, MockIncorporation
-        $VERBOSE = old_verbose
+        $VERBOSE                              = old_verbose
 
         module Hittable
           # logic for hitting an object
@@ -62,7 +74,7 @@ module Traits
 
         module BasicBehavior
           class GameObject
-            trait ({some_definition: "of a trait"})
+            trait ({ some_definition: "of a trait" })
           end
         end
 
@@ -70,8 +82,8 @@ module Traits
 
         # Silently switch back to original class
         old_verbose, $VERBOSE = $VERBOSE, nil
-        Incorporation = ORIGINAL_INCORPORATION
-        $VERBOSE = old_verbose
+        Incorporation         = ORIGINAL_INCORPORATION
+        $VERBOSE              = old_verbose
       end
     end
   end

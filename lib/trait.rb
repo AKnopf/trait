@@ -8,23 +8,17 @@
 
       attr_reader :module
 
-      def initialize(trait_name_or_module)
-        if trait_name_or_module.is_a? Module
-          @module = trait_name_or_module
-        else
-          @module = find_trait_module trait_name_or_module
-        end
-
+      def initialize(_module)
+          @module = _module
       end
 
       # @param [Trait|Hash] arg
       def self.[](arg)
-        if arg.is_a? Trait
-          arg
-        else
-          Trait.new arg
-        end
+        arg.to_trait
+      end
 
+      def to_trait
+        self
       end
 
       def to_s
@@ -79,21 +73,6 @@
         else
           (method_name.to_s+"_in_#{self.simple_name.to_snake_case}").to_sym
         end
-      end
-
-      private
-
-      # @param [String|Symbol] name
-      # @return [Module] The module with name, if it is in ::Chingu::Traits::HOME
-      # @raise [RuntimeError] If trait was not found
-      def find_trait_module(name)
-        constant = name.to_constant
-        ::Traits::HOME.each do |home|
-          if home.const_defined? constant
-            return home.const_get constant
-          end
-        end
-        raise "trait '#{name}' was resolved to '#{constant}' but was not found."
       end
     end
   end

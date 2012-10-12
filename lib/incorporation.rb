@@ -17,14 +17,15 @@ module Traits
     # @return [Hash<Trait, Hash>] traits that are incorporated from the incorporator and their respective options
     attr_reader :traits
 
-    # @return [Hash<Symbol, Resolve>] resolves names of possibly conflicting methods and their respective
-    #   resolve patterns
+    # @return [Hash<Symbol, Proc>] resolves names of possibly conflicting methods and their respective resolve als
+    #   proc
     attr_reader :resolves
 
     # @return [Traitable] The class or trait module that uses this incorporation of traits
     attr_reader :incorporator
 
 
+    # Creates a new Incorporation out of an argument list or anything that responds to :to_trait_incorporation
     def self.[](*args)
       if args.is_a?(Array) && args.size > 1
         new(*args)
@@ -33,25 +34,26 @@ module Traits
       end
     end
 
+    # @return [self]
     def to_trait_incorporation
       self
     end
 
 
+    # Initializes the Incorporation object with traits, resolves and incorporator
     def initialize(traits,
         resolves,
         incorporator)
-
       @traits       = initialize_traits normalize_traits traits
-      @resolves     = initialize_resolves normalize_resolves resolves
+      @resolves     = normalize_resolves resolves
       @incorporator = incorporator
 
       validate
 
     end
 
-
     # Executes the Incorporation of traits into a trait or class.
+    # @raise [RuntimeError] if there are unresolved colliding methods
     def incorporate
       if colliding_methods.empty? #trivial case: no conflicts
         traits.keys.each { |trait| incorporator.send(:include, trait.module) }
@@ -61,7 +63,7 @@ module Traits
         incorporation_resolves = self.resolves
         colliding_methods.each do |method|
           #raise incorporator.inspect
-          incorporator.send(:define_method, method, incorporation_resolves[method].lambda)
+          incorporator.send(:define_method, method, incorporation_resolves[method])
         end
       else # unresolved conflicts
         raise "there are unresolved colliding methods: #{unresolved_colliding_methods}"
@@ -69,6 +71,8 @@ module Traits
     end
 
 
+    # @return [Array<Symbol>] Method names of methods that are implemented by more than one trait or by the
+    #   incorporator + at least one trait
     def colliding_methods
       # Get methods from traits
       methods = traits.keys.collect(&:instance_methods)
@@ -80,6 +84,8 @@ module Traits
       methods.duplicates!
     end
 
+
+    # @return [Array<Symbol>] Method names of methods that are colliding, but have no resolve
     def unresolved_colliding_methods
       colliding_methods - resolves.keys
     end
@@ -87,18 +93,17 @@ module Traits
     private
 
 
+    # Checks whether the normalization was successful
+    # @raise [RuntimeError] if instance variables have unexpected format
     def validate
       validate_traits
       validate_resolves resolves
       validate_incorporator
     end
 
-    def validate_incorporator
-      raise "The incorporator #{incorporator} must include the Traitable module" unless incorporator.include?(Traitable)
-    end
 
     # Makes Resolves default to an empty hash. Also splits up an array key into its elements as keys.
-    # {[:a,:b] => {}} becomes {:a => {}, :b => {}}
+    # {[:a,:b] => ->{}} becomes {:a => ->{}, :b => ->{}}
     def normalize_resolves(resolves)
       resolves                  = resolves || { }
       resolves_with_array_match = resolves.select { |match, _| match.is_a?(Array) }
@@ -110,23 +115,6 @@ module Traits
       resolves.reject! { |match, _| match.is_a?(Array) } || resolves
     end
 
-    # Makes a Hash<Symbol,Resolve> out of Hash<Symbol, Resolve|Hash>
-    def initialize_resolves(normalized_resolves)
-      default_order       = traits.keys
-      default_options     = { order:     default_order,
-                              link_mode: :call_in_order }
-      normalized_resolves = normalized_resolves.collect do |method_name, resolve_options|
-        actual_resolve_options = default_options.merge(resolve_options)
-        { method_name => Resolve[actual_resolve_options] }
-      end
-      normalized_resolves.inject({ }, :merge)
-    end
-
-    # Makes attributes default to an empty hash
-    def normalize_attributes(attributes)
-      attributes || { }
-    end
-
     # Makes an Hash<Trait,Hash> out of a Hash<Symbol|Module, Hash> (name or module with their respective options)
     def initialize_traits(normalized_traits)
       normalized_traits.collect { |trait_name, options| { Trait[trait_name] => options } }.inject(&:merge)
@@ -136,7 +124,6 @@ module Traits
     # array, they are converted into their notation with incorporation options
     def normalize_traits(traits)
       if traits.is_a? Array
-        validate_traits_as_array traits
         traits.collect { |trait| { trait => { } } }.inject(&:merge)
       elsif traits.is_a?(Symbol) || traits.is_a?(Module)
         { traits => { } }
@@ -145,15 +132,15 @@ module Traits
       end
     end
 
+    # @raise [RuntimeError] if incorporator is not traitable
+    def validate_incorporator
+      raise "The incorporator #{incorporator} must include the Traitable module" unless incorporator.include?(Traitable)
+    end
+
+    # @raise [RuntimeError] if traits are not instances of Trait and options are instances of Hash
     def validate_traits
       valid = traits.all? { |trait, options| trait.instance_of?(Trait) && options.instance_of?(Hash) }
       raise "Traits must be instance of ::Traits::Trait" unless valid
-    end
-
-    def validate_traits_as_array(traits)
-      #raise "Traits must be specified as Array<Symbol|Module>" unless
-      traits.respond_to? :all and traits.all? { |trait|
-        trait.is_a?(Symbol) || trait.is_a?(Module) }
     end
 
     def validate_traits_normalized(traits)

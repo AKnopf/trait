@@ -1,4 +1,4 @@
-require_relative '../../lib/core_extensions/can_be_constant'
+require_relative '../../lib/core_extensions/string_and_symbol'
 
 #noinspection ALL
 module NoInpsection
