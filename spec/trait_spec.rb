@@ -7,8 +7,10 @@ require_relative '../lib/traits_home'
 describe ::Traits::Trait do
   before :each do
     # Dont give warnings when overwriting the constant - only during this test!
+    #noinspection RubyGlobalVariableNamingConvention
     old_verbose, $VERBOSE = $VERBOSE, nil
     ::Traits.const_set(:TestTrait, Module.new)
+    #noinspection RubyGlobalVariableNamingConvention
     $VERBOSE = old_verbose
   end
 
@@ -63,6 +65,7 @@ describe ::Traits::Trait do
   end
 
   it 'should alias methods with ? and ! with its own suffix' do
+    #noinspection ALL
     module ::Traits::TestTraitWithQuestionMarkAndBang
       def sure?
         @sure

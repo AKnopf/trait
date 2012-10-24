@@ -1,5 +1,6 @@
 require_relative '../lib/filter'
 
+#noinspection ALL
 module Traits
   describe 'Filter' do
     module FirstModule

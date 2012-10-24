@@ -53,9 +53,9 @@ module Traits
     end
 
     def normalize_options(normalized_traits)
-      normalized_traits.each do |_,options|
-        [:only,:except].each do |option|
-          options[option] and !options[option].is_a?(Array) and options[option] = [options[option]]
+      normalized_traits.each do |_, options|
+        [:only, :except].each do |option|
+          options[option] = [options[option]] if options[option] and !options[option].is_a?(Array)
         end
       end
     end
@@ -68,7 +68,7 @@ module Traits
       if colliding_methods.empty? #trivial case: no conflicts
         traits.each { |trait, options| incorporate_single_trait trait, options }
       elsif unresolved_colliding_methods.empty? # all conflicts are resolved
-        traits.each do |trait,options|
+        traits.each do |trait, options|
           trait.alias_methods *colliding_methods
           incorporate_single_trait trait, options
         end
@@ -86,7 +86,7 @@ module Traits
     def colliding_methods
       # Get methods from traits
       methods = []
-      traits.each do |trait,options|
+      traits.each do |trait, options|
         methods += trait.instance_methods(options)
       end
       # Get methods from incorporator
@@ -113,16 +113,14 @@ module Traits
     private
 
     # Adds the methods from trait filtered by options to the incorporator
-    def incorporate_single_trait(trait,options)
-      trait.instance_methods(options).each do |trait_method_name|
-        incorporator.send(:include,trait.module)
-        if options[:except]
-          filter = ExceptFilter[incorporator, trait.module, *options[:except]]
-          incorporator.send(:include,filter)
-        elsif options[:only]
-          filter = OnlyFilter[incorporator, trait.module, *options[:only]]
-          incorporator.send(:include,filter)
-        end
+    def incorporate_single_trait(trait, options)
+      incorporator.send(:include, trait.module)
+      if options[:except]
+        filter = ExceptFilter[incorporator, trait.module, *options[:except]]
+        incorporator.send(:include, filter)
+      elsif options[:only]
+        filter = OnlyFilter[incorporator, trait.module, *options[:only]]
+        incorporator.send(:include, filter)
       end
     end
 
@@ -184,8 +182,8 @@ module Traits
     end
 
     def validate_resolves(resolves)
-      raise "Resolves must be specified as a Hash or list of resolves" unless resolves.is_a?(Hash) ||
-          resolves.all? { |resolve| resolve.is_a?(Resolve) && resolve.validate }
+      raise "Resolves must be specified as a Hash" unless resolves.is_a?(Hash) ||
+          resolves.all? { |symbol, proc| symbol.is_a?(Symbol) and proc.is_a?(Proc) }
     end
 
   end

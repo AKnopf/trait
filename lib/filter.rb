@@ -27,6 +27,7 @@ module Traits
   #   c.a_method #=> "a_method in M2"
   #   c.another_method #=> "another_method in M1"
   class ExceptFilter
+    #noinspection RubyScope
     def self.[](base, _module, *methods)
       filter = Module.new do
         methods.each do |method|

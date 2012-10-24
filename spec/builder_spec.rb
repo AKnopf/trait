@@ -8,6 +8,8 @@ require_relative '../lib/core_extensions/module'
 require_relative '../lib/traitable'
 require_relative '../lib/incorporation'
 
+#noinspection RubyArgCount
+#noinspection RubyResolve
 module Traits
   describe Builder do
 
