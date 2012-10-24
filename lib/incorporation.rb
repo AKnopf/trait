@@ -44,7 +44,7 @@ module Traits
     def initialize(traits,
         resolves,
         incorporator)
-      @traits       = initialize_traits normalize_traits traits
+      @traits       = initialize_traits normalize_options normalize_traits traits
       @resolves     = normalize_resolves resolves
       @incorporator = incorporator
 
@@ -52,17 +52,28 @@ module Traits
 
     end
 
+    def normalize_options(normalized_traits)
+      normalized_traits.each do |_,options|
+        [:only,:except].each do |option|
+          options[option] and !options[option].is_a?(Array) and options[option] = [options[option]]
+        end
+      end
+    end
+
     # Executes the Incorporation of traits into a trait or class.
     # @raise [RuntimeError] if there are unresolved colliding methods
+    # @raise [RuntimeError] if there are methods in :only or :except clauses that are not defined in the respective
+    #   trait
     def incorporate
       if colliding_methods.empty? #trivial case: no conflicts
-        traits.keys.each { |trait| incorporator.send(:include, trait.module) }
+        traits.each { |trait, options| incorporate_single_trait trait, options }
       elsif unresolved_colliding_methods.empty? # all conflicts are resolved
-        traits.keys.each { |trait| trait.alias_methods(*colliding_methods) }
-        traits.keys.each { |trait| incorporator.send(:include, trait.module) }
+        traits.each do |trait,options|
+          trait.alias_methods *colliding_methods
+          incorporate_single_trait trait, options
+        end
         incorporation_resolves = self.resolves
         colliding_methods.each do |method|
-          #raise incorporator.inspect
           incorporator.send(:define_method, method, incorporation_resolves[method])
         end
       else # unresolved conflicts
@@ -70,18 +81,27 @@ module Traits
       end
     end
 
-
     # @return [Array<Symbol>] Method names of methods that are implemented by more than one trait or by the
     #   incorporator + at least one trait
     def colliding_methods
       # Get methods from traits
-      methods = traits.keys.collect(&:instance_methods)
+      methods = []
+      traits.each do |trait,options|
+        methods += trait.instance_methods(options)
+      end
       # Get methods from incorporator
       methods << incorporator.instance_methods(false)
       # Flatten them to one array
-      methods = methods.flatten!
+      methods.flatten!
       # Select those that are duplicated and return an array with one of each
       methods.duplicates!
+    end
+
+    def ensure_all_methods_existent(trait, sub_set_of_methods, except_or_only)
+      too_many = sub_set_of_methods - trait.instance_methods
+      unless too_many.empty?
+        raise "Error in #{except_or_only} clause: #{too_many} methods are not defined in the trait #{trait}"
+      end
     end
 
 
@@ -91,6 +111,20 @@ module Traits
     end
 
     private
+
+    # Adds the methods from trait filtered by options to the incorporator
+    def incorporate_single_trait(trait,options)
+      trait.instance_methods(options).each do |trait_method_name|
+        incorporator.send(:include,trait.module)
+        if options[:except]
+          filter = ExceptFilter[incorporator, trait.module, *options[:except]]
+          incorporator.send(:include,filter)
+        elsif options[:only]
+          filter = OnlyFilter[incorporator, trait.module, *options[:only]]
+          incorporator.send(:include,filter)
+        end
+      end
+    end
 
 
     # Checks whether the normalization was successful

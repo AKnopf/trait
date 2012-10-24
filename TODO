@@ -1,10 +1,6 @@
 = TODO
-* Class Incorporation: resolves should be Hash<Symbol, Proc> instead of Hash<Symbol,Resolve>
-* Use a builder pattern for creating incorporations!
-    * Make builder.resolves([:m1, :m2, :m3]).with_pattern.etc.etc possible
-    * Patterns for resolves only in this syntax: Normalized resolves are always just lambdas
-    * Therefore refactor resolve class...
-* incorporation options :only and :except
+* enable builder to
+    * incorporation options :only and :except
 
 
 = ideas

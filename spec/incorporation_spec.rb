@@ -6,6 +6,7 @@ require_relative '../lib/core_extensions/array'
 require_relative '../lib/core_extensions/hash'
 require_relative '../lib/traits_home'
 require_relative '../lib/core_extensions/string_and_symbol'
+require_relative '../lib/filter'
 
 #noinspection ALL
 module Traits
@@ -144,7 +145,7 @@ module Traits
 
     it 'should alias conflicted methods in traits upon incorporation' do
       Incorporation[traits:       [:movable, :emotion],
-                    resolves:     { moved?: ->{ raise :moved } },
+                    resolves:     { moved?: -> { raise :moved } },
                     incorporator: generic_traitable_class].incorporate
       #raise Trait[:movable].instance_methods.inspect
       Trait[:movable].instance_methods.should include(:moved?, :direction, :moved_in_movable?)
@@ -227,7 +228,7 @@ module Traits
         class Fish
           trait(traits:       [:movable, :emotion],
                 incorporator: self,
-                resolves:     { moved?:-> { "resolved without use of original implementations"} }
+                resolves:     { moved?: -> { "resolved without use of original implementations" } }
           )
         end
 
@@ -324,6 +325,41 @@ module Traits
           selection << elem
         end
         selection.should have(1).entries
+      end
+
+
+      it 'can incorporate only a few methods via :only' do
+        module ABigTrait
+          def the_wanted_method
+
+          end
+
+          def the_unwanted_method
+
+          end
+        end
+
+        class ANeatClass
+          include Traitable
+          trait(traits:       { a_big_trait: { only: :the_wanted_method } },
+                incorporator: self)
+        end
+
+        a_neat_object = ANeatClass.new
+        -> { a_neat_object.the_wanted_method }.should_not raise_error
+        -> { a_neat_object.the_unwanted_method }.should raise_error(NameError)
+      end
+
+      it 'can incorporate only a few methods via :except' do
+        class ANiftyClass
+          include Traitable
+          trait(traits:       { a_big_trait: { except: :the_unwanted_method } },
+                incorporator: self)
+        end
+
+        a_nifty_object = ANiftyClass.new
+        -> { a_nifty_object.the_wanted_method }.should_not raise_error
+        -> { a_nifty_object.the_unwanted_method }.should raise_error(NameError)
       end
 
 

@@ -17,6 +17,7 @@
         arg.to_trait
       end
 
+      # @return self
       def to_trait
         self
       end
@@ -39,9 +40,24 @@
 
       include Comparable
 
-      def instance_methods
-        self.module.instance_methods false
+      # Returns the instance methods that are defined in this trait, methods can be restricted via options
+      # @param [Hash<(:only|:except),Array<Symbol>] options May include key :only or :except to restrict the methods
+      #   that are returned
+      # @return [Array<Symbol>] An array with method names of instance methods that are defined in this trait after
+      #   filtering them with :only or :except
+      # @raise RuntimeError if method names in :only or :except are not defined in this trait
+      def instance_methods(options = {})
+        if options.empty?
+          self.module.instance_methods false
+        elsif options[:except]
+          ensure_all_methods_existent(self,options[:except],'except')
+          instance_methods - options[:except]
+        elsif options[:only]
+          ensure_all_methods_existent(self,options[:only],'only')
+          options[:only]
+        end
       end
+
 
       # Returns the name of the module without its nesting
       # @example
@@ -65,6 +81,9 @@
         end
       end
 
+      # Returns the name of a method with the suffix of this trait.
+      # @example
+      #   Trait[MyTrait].aliased_method_name(:my_method) => :my_method_in_my_trait
       def aliased_method_name(method_name)
         last_letter = method_name.to_s[method_name.to_s.size-1]
         if %w(? !).member? last_letter
@@ -72,6 +91,16 @@
           (method_name.to_s.chop!+"_in_#{self.simple_name.to_snake_case}#{last_letter}").to_sym
         else
           (method_name.to_s+"_in_#{self.simple_name.to_snake_case}").to_sym
+        end
+      end
+
+
+      private
+
+      def ensure_all_methods_existent(trait, sub_set_of_methods, except_or_only)
+        too_many = sub_set_of_methods - trait.instance_methods
+        unless too_many.empty?
+          raise "Error in #{except_or_only} clause: #{too_many} methods are not defined in the trait #{trait}"
         end
       end
     end

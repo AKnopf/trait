@@ -6,7 +6,7 @@ module CanBeTrait
         return Traits::Trait[home.const_get constant]
       end
     end
-    raise "trait '#{name}' was resolved to '#{constant}' but was not found."
+    raise "trait '#{self}' was resolved to '#{constant}' but was not found."
   end
 end
 
