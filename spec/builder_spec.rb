@@ -72,15 +72,35 @@ module Traits
 
       Builder.new(Football).public_methods(false).should have(dsl_methods.size).dsl_methods
     end
+    build = -> do
+      Builder.new(Football).trait(:movable_for_builder).with_options(except: :to_s).trait(:scalable_for_builder).traits(:hittable_for_builder, :shooting_for_builder).resolves(:moved?).with_lambda(-> { raise "not really resolved" }).resolves(:to_s).with_pattern.call_in_order.build
+    end
 
-    it 'should construct a valid Incorporation' do
-      build = -> do
-        Builder.new(Football).trait(:movable_for_builder).with_options(except: :to_s).trait(:scalable_for_builder).traits(:hittable_for_builder, :shooting_for_builder).resolves(:moved?).with_lambda(-> { raise "not really resolved" }).resolves(:to_s).with_pattern.call_in_order.build
-      end
+    it 'raises no error' do
       build.should_not raise_error (RuntimeError)
       build.call.should be_instance_of(Incorporation)
     end
 
+    incorporation = build.call
+
+    it 'builds proper traits ad options' do
+      incorporation.traits.should have(4).traits
+      incorporation.traits.should include(Trait[MovableForBuilder],
+                                          Trait[ScalableForBuilder],
+                                          Trait[HittableForBuilder],
+                                          Trait[ShootingForBuilder])
+      incorporation.traits[Trait[MovableForBuilder]].should have(1).option_except
+      incorporation.traits[Trait[MovableForBuilder]].keys.first.should == :except
+      incorporation.traits[Trait[ScalableForBuilder]].should be_empty
+      incorporation.traits[Trait[HittableForBuilder]].should be_empty
+      incorporation.traits[Trait[ShootingForBuilder]].should be_empty
+    end
+
+    it 'builds proper resolves' do
+      incorporation.resolves.should have(2).resolves
+      incorporation.resolves.keys.should include(:moved?,:to_s)
+      incorporation.resolves.values.all? {|resolve| resolve.is_a? Proc}.should be_true
+    end
 
   end
 

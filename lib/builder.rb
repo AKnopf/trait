@@ -49,6 +49,16 @@ module Traits
       end
     end
 
+    def except(*methods)
+      with_options(except: methods)
+    end
+
+    def only(*methods)
+      with_options(only: methods)
+    end
+
+    alias_method :but_only, :only
+
     def traits(*traits)
       traits.each { |trait| trait(trait) }
       self
@@ -122,7 +132,6 @@ module Traits
     def and
       self
     end
-
 
     def build
       Incorporation.new(traits_accu, resolves_accu, incorporator)

@@ -1,6 +1,7 @@
 = TODO
-* enable builder to
-    * incorporation options :only and :except
+* test renaming when conflict is between Traitable and Trait
+* test composition of traits
+* more patterns for builder
 
 
 = ideas
