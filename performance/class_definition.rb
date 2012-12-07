@@ -1,4 +1,4 @@
-require 'benchmark'
+require 'class_definition'
 
 
 require_relative '../lib/core_extensions/array'
@@ -32,23 +32,23 @@ end
 n = 50000
 
 Benchmark.bm(20) do |b|
-  b.report('Call method on mixed in class: ') do
-    klass = Class.new do
-      include Traits::Traitable
-      incorporate.traits(:hittable, :position)
-      .and
-      .resolve(:update)
-        .with_pattern
-        .call_in_order
-      .done
-    end
-
-    object = klass.new
-    raise object.update_in_hittable.inspect
-    n.times do
-      object.update
-    end
-  end
+  #b.report('Call method on mixed in class: ') do
+  #  klass = Class.new do
+  #    include Traits::Traitable
+  #    incorporate.traits(:hittable, :position)
+  #    .and
+  #    .resolve(:update)
+  #      .with_pattern
+  #      .call_in_order
+  #    .done
+  #  end
+  #
+  #  object = klass.new
+  #  raise object.update_in_hittable.inspect
+  #  n.times do
+  #    object.update
+  #  end
+  #end
 
 
   b.report('Define class with mixin: ') do
@@ -74,18 +74,18 @@ Benchmark.bm(20) do |b|
     end
   end
 
-  b.report('Call method on mixed in class: ') do
-    klass = Class.new do
-      include Traits::Hittable
-      include Traits::Position
-    end
-
-    object = klass.new
-
-    n.times do
-      object.update
-    end
-  end
+  #b.report('Call method on mixed in class: ') do
+  #  klass = Class.new do
+  #    include Traits::Hittable
+  #    include Traits::Position
+  #  end
+  #
+  #  object = klass.new
+  #
+  #  n.times do
+  #    object.update
+  #  end
+  #end
 
 end
 
