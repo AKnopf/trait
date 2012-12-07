@@ -2,6 +2,8 @@ require_relative '../lib/core_extensions/array'
 require_relative '../lib/core_extensions/hash'
 require_relative '../lib/core_extensions/module'
 require_relative '../lib/core_extensions/string_and_symbol'
+
+require_relative '../lib/method_aliasing'
 require_relative '../lib/builder'
 require_relative '../lib/filter'
 require_relative '../lib/incorporation'
@@ -29,6 +31,8 @@ module Traits
     incorporate.traits(:hittable)
     .resolve(:update)
       .with_lambda { update_in_monster_with_traits + update_in_hittable }
+    .done
+
   end
 
   class MonsterWithMixins
