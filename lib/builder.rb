@@ -85,15 +85,18 @@ module Traits
     alias_method :resolves, :resolve
 
 
-    def with_lambda(proc)
+    def with_lambda(proc = nil,&block)
       if call_stack.last == :resolve
         call_stack.pop
+        proc ||= block
         resolves_accu[call_stack.pop] = proc
         self
       else
         raise 'You may not call "with_lambda" here. Call "resolve" first'
       end
     end
+
+    alias_method :manually, :with_lambda
 
     def with_pattern
       if call_stack.last == :resolve

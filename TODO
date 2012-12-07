@@ -1,15 +1,22 @@
 = TODO
+* test conflict among traits when there is no method in the class
 * test renaming when conflict is between Traitable and Trait
 * test composition of traits
 * more patterns for builder
+    * method(symbol) - calling the in-class-defined-method instead
+    * inject
+    * pick_one
+* Conflicts between methods defined in classes and methods defined by incorporated traits
+  are resolved using the following two precedence rules.
+  * Class methods take precedence over trait methods.
+  * Trait methods take precedence over superclass methods.
+  * To do that: Create a new mixin module directly above the class so that the class programmer can use
+	super to access the traits implementation
 
 
 = ideas
 * Define "part state"  - a trait that handles instance variables.
   So the class does not need to implement all the getters and setters manually
 * Patterns for resolves: (manual lambda does not count as pattern any longer)
-    * method(symbol) - calling the in-class-defined-method instead
-    * call_in_order
-    * inject
-    * pick_one
+
 

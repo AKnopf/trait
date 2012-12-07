@@ -15,6 +15,7 @@ module Traits
 
     module MovableForBuilder
 
+
       def to_s
         'movable'
       end
@@ -65,7 +66,11 @@ module Traits
                      :incorporate,
                      :and,
                      :build,
-                     :incorporation]
+                     :incorporation,
+                     :except,
+                     :only,
+                     :but_only,
+                     :manually]
       Builder.new(Football).should respond_to(*dsl_methods)
 
       Builder.new(Football).public_methods(false).should include(*dsl_methods)
@@ -98,8 +103,8 @@ module Traits
 
     it 'builds proper resolves' do
       incorporation.resolves.should have(2).resolves
-      incorporation.resolves.keys.should include(:moved?,:to_s)
-      incorporation.resolves.values.all? {|resolve| resolve.is_a? Proc}.should be_true
+      incorporation.resolves.keys.should include(:moved?, :to_s)
+      incorporation.resolves.values.all? { |resolve| resolve.is_a? Proc }.should be_true
     end
 
   end
