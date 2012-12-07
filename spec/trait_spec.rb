@@ -1,7 +1,9 @@
-require_relative '../lib/traitable'
-require_relative '../lib/trait'
 require_relative '../lib/core_extensions/module'
 require_relative '../lib/core_extensions/string_and_symbol'
+
+require_relative '../lib/method_aliasing'
+require_relative '../lib/traitable'
+require_relative '../lib/trait'
 require_relative '../lib/traits_home'
 
 describe ::Traits::Trait do

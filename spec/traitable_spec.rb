@@ -2,6 +2,7 @@ require_relative '../lib/core_extensions/array'
 require_relative '../lib/core_extensions/hash'
 require_relative '../lib/core_extensions/module'
 
+require_relative '../lib/method_aliasing'
 require_relative '../lib/incorporation'
 require_relative '../lib/trait'
 require_relative '../lib/traitable'

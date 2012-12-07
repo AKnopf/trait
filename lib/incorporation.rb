@@ -68,6 +68,8 @@ module Traits
       if colliding_methods.empty? #trivial case: no conflicts
         traits.each { |trait, options| incorporate_single_trait trait, options }
       elsif unresolved_colliding_methods.empty? # all conflicts are resolved
+        incorporator.send(:extend,MethodAliasing)
+        incorporator.alias_methods *colliding_methods
         traits.each do |trait, options|
           trait.alias_methods *colliding_methods
           incorporate_single_trait trait, options

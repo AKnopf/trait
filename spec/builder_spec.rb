@@ -1,3 +1,4 @@
+require_relative '../lib/method_aliasing'
 require_relative '../lib/builder'
 require_relative '../lib/trait'
 require_relative '../lib/traits_home'

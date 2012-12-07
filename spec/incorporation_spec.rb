@@ -1,11 +1,13 @@
-require_relative '../lib/incorporation'
-require_relative '../lib/trait'
-require_relative '../lib/traitable'
 require_relative '../lib/core_extensions/module'
 require_relative '../lib/core_extensions/array'
 require_relative '../lib/core_extensions/hash'
-require_relative '../lib/traits_home'
 require_relative '../lib/core_extensions/string_and_symbol'
+
+require_relative '../lib/method_aliasing'
+require_relative '../lib/incorporation'
+require_relative '../lib/trait'
+require_relative '../lib/traitable'
+require_relative '../lib/traits_home'
 require_relative '../lib/filter'
 
 #noinspection ALL
@@ -96,7 +98,7 @@ module Traits
 
     module Movable
       def moved?
-
+        "moved in movable"
       end
 
       def direction
@@ -177,6 +179,42 @@ module Traits
 
 
     describe 'actual incorporation' do
+
+      it 'resolves conflicts among traits when there is no method in the class' do
+
+        class Truck
+          include Traitable
+          trait(traits:       [:movable, :emotion],
+                incorporator: self,
+                resolves:     { moved?: -> { moved_in_movable? } })
+        end
+
+        truck = Truck.new
+
+        truck.moved?.should == "moved in movable"
+      end
+
+      it 'ignores resolves that are not neccessary' do
+
+        module Workshop
+          def repair
+            "clonk"
+          end
+        end
+
+        class Truck
+          include Traitable
+          trait(traits:       [:movable, :emotion, :workshop],
+                incorporator: self,
+                resolves:     { moved?: -> { moved_in_movable? },
+                                repair: -> { "clank" } })
+        end
+
+        truck = Truck.new
+
+        truck.repair.should == "clonk"
+
+      end
 
       it 'enables instance methods when there are no collisions' do
         module Hittable
